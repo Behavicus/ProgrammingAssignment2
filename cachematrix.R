@@ -33,7 +33,7 @@ cachematrix <- function(x,...) {
                 return(m)
         }
         data <- x$get() # m = null then get the function get from the list and set to data
-        m <- solve(data, ...) # and set to m 
+        m <- solve(data, ...) # and set to m, crucially here we are using solve instead of another function such as mean as give in the example 
         x$setinverse(m) #set new m
         return(m) # show the values within m
 }
